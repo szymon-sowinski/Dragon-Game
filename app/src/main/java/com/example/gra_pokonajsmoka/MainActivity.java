@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         submitButton.setOnClickListener(view -> {
             Random rand = new Random();
-            int randomNumber = rand.nextInt(10);
+            int randomNumber = rand.nextInt(100);
             String number = userNumber.getText().toString().trim();
             String outcome;
 
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                         outcome = "Gratulacje! Pokonano smoka.";
                     }
                     else {
-                        outcome = "Spróbuj ponownie! Nie trafiono liczby. Liczba to: ";
+                        outcome = "Spróbuj ponownie! Nie trafiono liczby.";
                     }
                 }
                 else {
