@@ -1,0 +1,9 @@
+<font-family xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="400"
+        app:font="@font/lato_regular" />
+</font-family>
