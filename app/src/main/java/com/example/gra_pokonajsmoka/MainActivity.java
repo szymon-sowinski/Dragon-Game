@@ -10,6 +10,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EdgeEffect;
+import android.media.MediaPlayer;
 
 
 import android.os.Bundle;
@@ -23,11 +24,14 @@ public class MainActivity extends AppCompatActivity {
 
         EditText userNumber = findViewById(R.id.userNumber);
         Button submitButton = findViewById(R.id.submitButton);
+        MediaPlayer DragonSound = MediaPlayer.create(this,R.raw.dragon_sound);
+
 
 
         submitButton.setOnClickListener(view -> {
-            Random rand = new Random();
-            int randomNumber = rand.nextInt(100);
+//            Random rand = new Random();
+//            int randomNumber = rand.nextInt(100);
+            int randomNumber = 5;
             String number = userNumber.getText().toString().trim();
             String outcome;
 
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 if(userNumber2 >= 0 && userNumber2 <= 100){
                     if(userNumber2 == randomNumber){
                         outcome = "Gratulacje! Pokonano smoka.";
+                        DragonSound.start();
                     }
                     else {
                         outcome = "Spróbuj ponownie! Nie trafiono liczby.";
