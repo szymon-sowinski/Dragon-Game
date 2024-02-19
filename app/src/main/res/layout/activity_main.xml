@@ -37,7 +37,7 @@
 
     <EditText
         android:id="@+id/userNumber"
-        android:layout_width="363dp"
+        android:layout_width="343dp"
         android:layout_height="40dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="216dp"
@@ -60,24 +60,37 @@
         android:layout_marginTop="284dp"
         android:layout_marginEnd="17dp"
         android:backgroundTint="@color/darkBlue"
-        android:paddingHorizontal="70dp"
-        android:text="Graj!"
         android:fontFamily="@font/lato"
+        android:paddingHorizontal="30dp"
+        android:text="Graj!"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/difficultyCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Wyższy poziom trudności"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userNumber" />
 
     <ImageView
         android:id="@+id/myImageView"
         android:layout_width="352dp"
         android:layout_height="565dp"
-        android:layout_marginBottom="-125dp"
         android:layout_marginStart="-40dp"
+        android:layout_marginBottom="-145dp"
         android:contentDescription="Image description"
         android:src="@drawable/rycerz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userNumber" />
-
+        app:layout_constraintTop_toBottomOf="@+id/userNumber"
+        app:layout_constraintVertical_bias="0.371" />
 </androidx.constraintlayout.widget.ConstraintLayout>
