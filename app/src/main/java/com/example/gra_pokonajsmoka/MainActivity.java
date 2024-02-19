@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 //            int randomNumber = rand.nextInt(100);
             int randomNumber = 5;
             String number = userNumber.getText().toString().trim();
-            String outcome;
+            String outcome = "";
 
             if(number.isEmpty()) {
                 outcome = "Proszę podać wartość!";
@@ -41,12 +41,21 @@ public class MainActivity extends AppCompatActivity {
             else {
                 float userNumber2 =Integer.parseInt(userNumber.getText().toString().trim());
                 if(userNumber2 >= 0 && userNumber2 <= 100){
-                    if(userNumber2 == randomNumber){
+                    int difference = Math.abs((int) userNumber2 - randomNumber);
+                    if(difference == 0){
                         outcome = "Gratulacje! Pokonano smoka.";
                         DragonSound.start();
                     }
+                    else if(difference <= 10){
+                        if(difference < userNumber2) {
+                            outcome = "Byłeś/aś blisko! Twoja liczba była większa o " + difference + " od wylosowanej przez smoka";
+                        }
+                        else {
+                            outcome = "Byłeś/aś blisko! Twoja liczba była mniejsza o " + difference + " od wylosowanej przez smoka";
+                        }
+                    }
                     else {
-                        outcome = "Spróbuj ponownie! Nie trafiono liczby.";
+                        outcome = "Byłeś/aś daleko!";
                     }
                 }
                 else {
